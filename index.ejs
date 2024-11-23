@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Honk&family=Inconsolata&family=Jersey+10&family=Jersey+15&family=Monoton&family=Poppins:wght@400;700&family=Roboto:ital,wght@1,100&family=Sedgwick+Ave+Display&family=Tilt+Prism&family=Tiny5&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Honk&family=Inconsolata&family=Monoton&family=Poppins:wght@400;700&family=Roboto:ital,wght@1,100&family=Sedgwick+Ave+Display&family=Tilt+Prism&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Noticias/noticias.html">About</a></li>
+                <li><a href="../Categorías/categorias.html">Categorías</a></li>
+            </ul>
+            <h1 class="logo" href="">GameHub</h1>
+            <div class="nav-right">
+                <input type="text" placeholder="Buscador 🔍" class="search-bar">
+                <button class="login-button">Login</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-section">
+            <div class="overlay">
+                <div class="hero-text">
+                    <h2>TU PASIÓN POR LOS VIDEOJUEGOS, <br> NUESTRA RAZÓN DE SER.</h2>
+                    <p>Juega más, experimenta más. Descubre GameHub.</p>
+                </div>
+                <div class="hero-buttons">
+                    <button class="circle-button">❤</button>
+                    <button class="circle-button">➕</button>
+                </div>
+            </div>
+            <img src="cyberpunk.jpg" alt="Cyberpunk Edgerunners" class="hero-image">
+        </div>
+        <div class="categories">
+            <div class="category" onclick="showCarousel('pc')">🎮 PC</div>
+            <div class="category" onclick="showCarousel('xbox')">🎮 XBOX</div>
+            <div class="category" onclick="showCarousel('nintendo')">🎮 NINTENDO</div>
+            <div class="category" onclick="showCarousel('playstation')">🎮 PLAYSTATION</div>
+        </div>
+        
+        <div class="carousel-container">
+            <div id="carousel" class="carousel">
+                <!-- Carrusel dinámico generado con JavaScript -->
+            </div>
+        </div> 
+    </main>
+
+    <br>
+    <br>
+
+    <div class="news-section">
+        <h2>-- Últimas Noticias --</h2>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="https://i.pinimg.com/736x/6f/71/09/6f710903127cd2957434ea1759b8d96d.jpg" alt="Noticia 1">
+                <h3>Nuevo DLC para Cyberpunk 2077</h3>
+                <p>El DLC "Phantom Liberty" llegará pronto con nuevas misiones y personajes.</p>
+                <br>
+                <button class="read-more">Leer más</button>
+            </div>
+            <div class="news-item">
+                <img src="https://i.pinimg.com/736x/7d/c3/a4/7dc3a41a2669b47f06ed6f3b65836638.jpg" alt="Noticia 2">
+                <h3>Fecha de lanzamiento de GTA VI</h3>
+                <p>Rockstar Games confirma el lanzamiento para finales del próximo año.</p>
+                <br>
+                <button class="read-more">Leer más</button>
+            </div>
+            <div class="news-item">
+                <img src="https://i.pinimg.com/736x/81/2c/83/812c838189d32235817272e3fb71f5b8.jpg" alt="Noticia 3">
+                <h3>Nuevo Evento en Fortnite</h3>
+                <p>Prepárate para el evento temático con skins exclusivos y recompensas.</p>
+                <br>
+                <button class="read-more">Leer más</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre GameHub</h4>
+                <p>
+                    GameHub es tu destino definitivo para las últimas noticias, lanzamientos y eventos del mundo de los videojuegos. Explora, juega y conecta con nuestra comunidad.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Noticias/noticias.html">Noticias</a></li>
+                    <li><a href="../Categorías/categorias.html">Categorías</a></li>
+                    <li><a href="../Contacto/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contáctanos</h4>
+                <p>Email: soporte@gamehub.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+                <p>Dirección: Calle Falsa 123, Leon Guanajuato, Mexico</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GameHub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+
+
+
+
+<script>
+    // Datos de juegos para cada categoría
+    const games = {
+        pc: [
+            { 
+                image: 'https://i.pinimg.com/736x/c8/c7/b0/c8c7b03f8c5cfb7e98263328cdb95367.jpg', 
+                title: 'Counter-Strike', 
+                description: 'Un juego de disparos táctico en primera persona con un enfoque en el trabajo en equipo. ' 
+            },
+            { 
+                image: 'https://i.pinimg.com/736x/b0/3a/9a/b03a9ab25a3e9449a6bc4645f97ba213.jpg', 
+                title: 'Dota 2', 
+                description: 'Un MOBA épico que enfrenta a dos equipos de héroes en intensas batallas estratégicas. Videojuego' 
+            },
+            { 
+                image: 'https://i.pinimg.com/736x/5d/42/06/5d420640b1e232674efbb4fcadc5374a.jpg', 
+                title: 'Rust', 
+                description: 'Sobrevive en un mundo abierto post-apocalíptico enfrentándote a la naturaleza y otros jugadores.' 
+            },
+            { 
+                image: 'https://i.pinimg.com/enabled_lo_mid/736x/9d/e1/0a/9de10af30ffe2af573f0718386f41f4e.jpg', 
+                title: 'Cyberpunk 2077', 
+                description: 'Explora Night City en este RPG de mundo abierto lleno de acción y narrativas inmersivas. Videojuego' 
+            },
+            { 
+                image: 'https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg', 
+                title: 'The Witcher 3', 
+                description: 'Embárcate en una aventura como Geralt de Rivia en un mundo abierto lleno de monstruos y magia.' 
+            },
+        
+        ],
+
+        xbox: [
+            { image: 'https://i.pinimg.com/736x/df/3f/8a/df3f8aea757dd3373681e852f52dbb77.jpg', title: 'Halo Infinite', description: 'Explore the vastness of Halo.' },
+            { image: 'https://i.pinimg.com/236x/12/e0/c9/12e0c9c80a81c3423132cb532283b2e9.jpg', title: 'Forza Horizon 5', description: 'The ultimate racing experience.' },
+            { image: 'https://i.pinimg.com/736x/e6/ad/5a/e6ad5a18b85d36709edb5aaf5cb72d4d.jpg', title: 'Gears of War E-DAY', description: 'A gritty third-person shooter.' },
+            { image: 'https://i.pinimg.com/736x/5e/92/34/5e92341a7e2bee43615a648173962a59.jpg', title: 'Sea of Thieves', description: 'Embark on pirate adventures.' },
+            { image: 'https://i.pinimg.com/enabled_lo_mid/736x/be/6b/0c/be6b0c2ba9a74de51a86a870cc70ea0a.jpg', title: 'Guitar Hero World Tour', description: 'A fantasy action RPG.' },
+        ],
+        nintendo: [
+            { image: 'https://i.pinimg.com/enabled_lo_mid/736x/ea/73/e3/ea73e33f2602cc085c8af5141a84af79.jpg', title: 'The Legend of Zelda', description: 'An epic adventure awaits.' },
+            { image: 'https://i.pinimg.com/736x/17/55/f0/1755f0e2a1e2c1b35487ad140f7389f3.jpg', title: 'Mario Kart 8', description: 'Race with Mario and friends.' },
+            { image: 'https://i.pinimg.com/736x/71/e1/e5/71e1e5b347bcd8af9e5fc211d162cdc3.jpg', title: 'Animal Crossing', description: 'Create your island paradise.' },
+            { image: 'https://i.pinimg.com/736x/1d/73/fc/1d73fc8d9f230a5c26557cd36f57e2e5.jpg', title: 'Super Smash Bros.', description: 'Battle your favorite characters.' },
+            { image: 'https://i.pinimg.com/736x/38/88/42/388842e71ad97e3ade80905ddf50c8c5.jpg', title: 'Splatoon 3', description: 'Ink your way to victory!' },
+        ],
+        playstation: [
+            { image: 'https://i.pinimg.com/736x/d9/aa/bd/d9aabdea001aca646b72dfd373cb4be5.jpg', title: 'God of War', description: 'The epic Norse saga continues.' },
+            { image: 'https://i.pinimg.com/736x/66/af/7d/66af7d9e8dc69268733f00d036c14c33.jpg', title: 'Horizon', description: 'Explore a lush, open world.' },
+            { image: 'https://i.pinimg.com/enabled_lo_mid/736x/19/ae/97/19ae975fbf820624764ce225b4510345.jpg', title: 'Spider-Man', description: 'Swing through New York City.' },
+            { image: 'https://i.pinimg.com/736x/52/61/9e/52619e4382a050d31df204cfedc9c1f6.jpg', title: 'Gran Turismo 7', description: 'The ultimate driving simulator.' },
+            { image: 'https://i.pinimg.com/736x/f8/d4/0d/f8d40dd42e306b217e79425a9d148503.jpg', title: 'The Last of Us Part II', description: 'An emotional narrative journey.' },
+        ],
+    };
+
+    // Función para mostrar el carrusel de una categoría
+    function showCarousel(category) {
+        const carousel = document.getElementById('carousel');
+        carousel.innerHTML = ''; // Limpiar el carrusel existente
+
+        games[category].forEach((game) => {
+            const item = document.createElement('div');
+            item.classList.add('carousel-item');
+            item.innerHTML = `
+                <img src="${game.image}" alt="${game.title}">
+                <h3>${game.title}</h3>
+                <p>${game.description}</p>
+                <button>Conseguir</button>
+            `;
+            carousel.appendChild(item);
+        });
+    }
+
+    // Mostrar una categoría por defecto (PC)
+    window.onload = () => showCarousel('pc');
+</script>
+
+</html>

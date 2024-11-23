@@ -1,0 +1,398 @@
+/* Reseteo básico */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+
+
+
+
+/* Estilos del header */
+.header {
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+}
+
+.logo {
+    color: yellow;
+    font-size: 50px;
+    font-family: 'Tiny5', sans-serif; /* Fuente estilo pixelada */
+    letter-spacing: 2px; /* Espaciado opcional para mayor efecto retro */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 10px 10px ;
+    border: 1px solid #444;
+    border-radius: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.login-button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Cambiar altura a un 60% del viewport */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px; /* Reducir padding */
+}
+
+.hero-text {
+    color: white;
+    max-width: 90%; /* Asegurarse de que se adapte en pantallas pequeñas */
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 36px; /* Reducir tamaño de fuente */
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-text p {
+    font-size: 14px; /* Reducir fuente en párrafos */
+    color: #ccc;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.circle-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+/* Categorías */
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    background-color: #111;
+    border-top: 1px solid #222;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid yellow;
+    border-radius: 20px;
+    color: yellow;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.1);
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+    padding: 20px;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: #111;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0 10px;
+}
+
+.carousel-item button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+    background-color: rgb(245, 65, 65);
+}
+
+
+
+
+
+/* Seccion de noticias */
+.news-section {
+    padding: 40px 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 50px;
+    font-family: "Jersey 15", sans-serif;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background-color: #222;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.news-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.news-item button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.news-item button:hover {
+    background-color: white;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px yellow;
+}
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: yellow;
+    
+}
+
+.footer-section p {
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: yellow;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #222;
+    padding-top: 10px;
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+/* Responsividad */
