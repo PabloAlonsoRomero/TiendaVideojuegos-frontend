@@ -1,21 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="" class="navbar-brand text-warning">GameHub</a>
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Categorías</a>
-            </li>
-        </ul>
-        <form action="" class="d-flex">
-            <input type="search" class="form-control me-2" placeholder="Buscar">
-            <button class="btn btn-outline-warning" type="submit">Buscar</button>
-        </form>
-        <a routerLing="/login" class="btn tbn-warning ms-3">Login</a>
-    </div>
-</nav>
+<header class="header">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link d-flex">Categorías</a>
+                </li>
+            </ul>
+            <a href="" class="navbar-brand logo">GameHub</a>
+            <form action="" class="d-flex">
+                <input type="search" class="form-control me-2" placeholder="Buscador 🔍">
+            </form>
+            <button><a routerLing="/login" class="btn tbn-warning ms-3">Login</a></button>
+        </div>
+    </nav>
+</header>
