@@ -47,4 +47,6 @@ body, h1, h2, p, ul, li, a {
     justify-content: center;
     height: 30px; /* Ajusta la altura del botón de login */
     padding: 0 10px; /* Ajusta el padding del botón de login */
+    font-weight: bold;
+    border-radius: 20px;
 }
