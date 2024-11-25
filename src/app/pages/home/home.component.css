@@ -1,0 +1,172 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Cambiar altura a un 60% del viewport */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px; /* Reducir padding */
+}
+
+.hero-text {
+    color: white;
+    max-width: 90%; /* Asegurarse de que se adapte en pantallas pequeñas */
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 36px; /* Reducir tamaño de fuente */
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.hero-text p {
+    font-size: 14px; /* Reducir fuente en párrafos */
+    color: #ccc;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.circle-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+/* Categorías */
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    background-color: #111;
+    border-top: 1px solid #222;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid yellow;
+    border-radius: 20px;
+    color: yellow;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.1);
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+    padding: 20px;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    background-color: #111;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0 10px;
+}
+
+.carousel-item button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+    background-color: rgb(245, 65, 65);
+}
+
