@@ -5,7 +5,8 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
   selector: 'app-home',
   imports: [NavbarComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  standalone: true
 })
 export class HomeComponent {
 
