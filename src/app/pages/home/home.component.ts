@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export class HomeComponent implements OnInit{
+  data: any[] = [];
   imageUrl: string = '';
 
   constructor(private videojuegoService: VideojuegoServiceService) {}
@@ -23,9 +24,9 @@ export class HomeComponent implements OnInit{
     this.videojuegoService.getJuegoRandom().subscribe(
       (respuesta) => {
         if (respuesta && respuesta.imagenes && respuesta.imagenes.length > 0) {
+          this.data = respuesta;
           this.imageUrl = respuesta.imagenes[0]; // Ajusta esto según la estructura de tu respuesta
         }
-        console.log('Datos obtenidos:', this.imageUrl);
       },
       (error) => {
         console.error('Error al obtener datos:', error);
