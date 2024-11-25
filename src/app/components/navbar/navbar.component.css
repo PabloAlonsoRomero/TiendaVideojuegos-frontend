@@ -50,3 +50,7 @@ body, h1, h2, p, ul, li, a {
     font-weight: bold;
     border-radius: 20px;
 }
+
+a {
+    text-decoration: none;
+}
