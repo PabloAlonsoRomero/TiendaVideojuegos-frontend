@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Usuario } from '../../interfaces/usuario';
+import { CommonModule } from '@angular/common';
 import { UsuarioService } from '../../services/usuarioService/usuario.service';
 
 @Component({
   selector: 'app-register',
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, CommonModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
   standalone: true
@@ -22,10 +23,10 @@ export class RegisterComponent {
     this.registerForm = this.fb.group({
       nombreUsuario: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required, Validators.minLength(6)],
-      confirmarPassword: ['', Validators.required],
+      contrasena: ['', Validators.required, Validators.minLength(6)],
+      confirmarContrasena: ['', Validators.required],
       telefono: ['', Validators.required],
-      username: ['', Validators.required]
+      nombre: ['', Validators.required]
     }, {validator: this.checkPasswords});
   }
 
