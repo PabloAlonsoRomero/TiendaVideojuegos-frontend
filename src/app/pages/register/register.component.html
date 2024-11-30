@@ -28,7 +28,7 @@
               Las contraseñas no coinciden
             </div>
             
-            <button type="submit" class="signin-button" [disabled]="!registerForm.valid">Registrar</button>
+            <button type="submit" class="signin-button" [disabled]="!registerForm.valid || passwordsNoCoinciden">Registrar</button>
         </form>
         <div class="signin-footer">
             <p>¿Ya tienes cuenta? <a routerLink="/login">Inicia Sesión</a></p>
