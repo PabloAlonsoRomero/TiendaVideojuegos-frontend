@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { VideojuegoServiceService } from '../../services/videojuego-service.service';
+import { VideojuegoServiceService } from '../../services/videojuegoService/videojuego-service.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
