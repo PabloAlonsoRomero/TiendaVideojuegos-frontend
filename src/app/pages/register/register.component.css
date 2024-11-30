@@ -92,3 +92,47 @@ body {
 .signin-footer a:hover {
     color: white;
 }
+
+.register-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.register-footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.register-form {
+    width: 100%;
+}
+
+.form-check-inline .form-check-input {
+    margin-right: 5px; /* Ajusta el margen derecho del input */
+}
+
+.form-check-inline .form-check-label {
+    margin-right: 15px; /* Ajusta el margen derecho del label */
+}
