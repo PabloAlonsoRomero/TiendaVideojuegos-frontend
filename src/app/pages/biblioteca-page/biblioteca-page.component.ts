@@ -12,9 +12,9 @@ import { IVideojuegoBibliotecaCard } from '../../interfaces/videojuego-bibliotec
   styleUrl: './biblioteca-page.component.css'
 })
 export class BibliotecaPageComponent {
-  @Input() videojuegoBiblioteca!: IVideojuegoBibliotecaCard;
 
   biblioteca: any[] = [];
+  bibliotecaInterface: IVideojuegoBibliotecaCard[] = [];
   bibliotecalenght: number = 0;
 
   constructor(
@@ -35,9 +35,17 @@ export class BibliotecaPageComponent {
           for (let i = 0; i < this.bibliotecalenght; i++) {
             this.videojuegoService.getJuego(this.biblioteca[i]).subscribe(
               response => {
-                console.log(response)
+                this.bibliotecaInterface.push({
+                  _id: response._id,
+                  titulo: response.titulo,
+                  descripcion: response.descripcion,
+                  genero: response.genero,
+                  desarrollador: response.desarrollador,
+                  distribuidor: response.distribuidor,
+                  imagen: response.imagenes[0]
+                })
+                console.log(this.bibliotecaInterface)
               }
-
             )
           }
         },

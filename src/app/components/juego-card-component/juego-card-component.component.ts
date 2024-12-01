@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IVideojuegoBibliotecaCard } from '../../interfaces/videojuego-biblioteca-card';
 
 @Component({
   selector: 'app-juego-card-component',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './juego-card-component.component.css'
 })
 export class JuegoCardComponentComponent {
-
+  @Input() juego!: IVideojuegoBibliotecaCard;
 }

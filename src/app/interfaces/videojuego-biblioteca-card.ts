@@ -1,4 +1,5 @@
 export interface IVideojuegoBibliotecaCard {
+    _id: string;
     titulo: string;
     descripcion: string;
     genero: string[];
