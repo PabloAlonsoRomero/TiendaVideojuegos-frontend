@@ -61,8 +61,9 @@ export class RegisterComponent implements OnInit {
 
       this.usuarioService.postUsuario(usuario).subscribe(
         response => {
-          console.log('Usuario registrado exitosamente', response);
+          console.log('Usuario registrado exitosamente');
           this.registerForm.reset();
+          this.router.navigate(['/login']);
         },
         error => {
           console.error('Error al registrar usuario', error);
