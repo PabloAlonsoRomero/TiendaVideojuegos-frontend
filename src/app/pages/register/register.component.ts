@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UsuarioService } from '../../services/usuarioService/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private router: Router
   ) {
     this.registerForm = this.fb.group({
       nombreUsuario: ['', Validators.required],
@@ -59,7 +61,18 @@ export class RegisterComponent implements OnInit {
 
       this.usuarioService.postUsuario(usuario).subscribe(
         response => {
-          console.log('Usuario registrado exitosamente', response);
+          console.log('Usuario registrado exitosamente');
+          this.registerForm.reset({
+            nombreUsuario: '',
+            email: '',
+            nombre: '',
+            telefono: '',
+            contrasena: '',
+            confirmarContrasena: '',
+          });
+          this.passwordsNoCoinciden = false;
+          this.router.navigate(['/login'])
+
         },
         error => {
           console.error('Error al registrar usuario', error);
