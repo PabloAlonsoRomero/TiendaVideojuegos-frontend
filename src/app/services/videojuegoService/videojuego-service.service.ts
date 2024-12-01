@@ -14,4 +14,8 @@ export class VideojuegoServiceService {
   getJuegoRandom(): Observable<any> {
     return this.http.get(`${this.baseUrl}/videojuegos/random`);
   }
+
+  getJuego(_id: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/videojuegos/getOneVideojuego`, { _id: _id})
+  }
 }
