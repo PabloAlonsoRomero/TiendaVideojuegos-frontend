@@ -19,8 +19,6 @@ export class BibliotecaPageComponent {
   ngOnInit() {
     const userId = localStorage.getItem('userId');
 
-    console.log('hola')
-
     if (userId) {
       this.usuarioService.getBiblioteca(userId).subscribe(
         response => {
