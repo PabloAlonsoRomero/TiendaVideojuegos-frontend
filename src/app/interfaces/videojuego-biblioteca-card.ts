@@ -1,4 +1,4 @@
-export interface VideojuegoBibliotecaCard {
+export interface IVideojuegoBibliotecaCard {
     titulo: string;
     descripcion: string;
     genero: string[];

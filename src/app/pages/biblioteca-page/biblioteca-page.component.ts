@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { JuegoCardComponentComponent } from '../../components/juego-card-component/juego-card-component.component';
 import { UsuarioService } from '../../services/usuarioService/usuario.service';
 import { VideojuegoServiceService } from '../../services/videojuegoService/videojuego-service.service';
+import { IVideojuegoBibliotecaCard } from '../../interfaces/videojuego-biblioteca-card';
 
 @Component({
   selector: 'app-biblioteca-page',
@@ -11,6 +12,8 @@ import { VideojuegoServiceService } from '../../services/videojuegoService/video
   styleUrl: './biblioteca-page.component.css'
 })
 export class BibliotecaPageComponent {
+  @Input() videojuegoBiblioteca!: IVideojuegoBibliotecaCard;
+
   biblioteca: any[] = [];
   bibliotecalenght: number = 0;
 

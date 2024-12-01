@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UsuarioService } from '../../services/usuarioService/usuario.service';
 import { Router } from '@angular/router';
-import { Usuario } from '../../interfaces/usuario';
+import { IUsuario } from '../../interfaces/usuario';
 
 @Component({
   selector: 'app-register',
@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit {
       
       this.passwordsNoCoinciden = false;
       
-      const usuario: Usuario = {
+      const usuario: IUsuario = {
         nombre_usuario: this.registerForm.value.nombreUsuario,
         email: this.registerForm.value.email,
         nombre: this.registerForm.value.nombre,

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Usuario } from '../../interfaces/usuario';
+import { IUsuario } from '../../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class UsuarioService {
     })
   }
 
-  postUsuario(usuario: Usuario): Observable<any> {
+  postUsuario(usuario: IUsuario): Observable<any> {
     return this.http.post(`${this.baseUrl}/usuario/registro`, {
         nombre: usuario.nombre,
         email: usuario.email,
