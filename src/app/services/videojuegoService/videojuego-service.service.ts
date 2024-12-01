@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class VideojuegoServiceService {
-  private baseUrl = "https://tiendavideojuegos-api.onrender.com"
+  private baseUrl = "http://localhost:3000";
 
   constructor(private http: HttpClient) { }
 

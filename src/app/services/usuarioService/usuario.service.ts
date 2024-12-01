@@ -7,7 +7,7 @@ import { Usuario } from '../../interfaces/usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private baseUrl = "https://tiendavideojuegos-api.onrender.com"
+  private baseUrl = "http://localhost:3000";
 
   constructor(private http: HttpClient) { }
 
