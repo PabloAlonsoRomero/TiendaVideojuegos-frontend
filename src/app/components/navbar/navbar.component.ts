@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -12,9 +12,28 @@ import { RouterLink } from '@angular/router';
 export class NavbarComponent {
   isLoggedIn = false;
   userId: string | null = null;
+  nombre_usuario: string | null = null;
+
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     this.userId = localStorage.getItem('userId');
+
+    if (this.isLoggedIn) {
+      this.nombre_usuario = localStorage.getItem('nombre_usuario');
+    }
+  }
+
+  cerrarSesion() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('nombre_usuario');
+    this.isLoggedIn = false;
+    this.userId = null;
+    this.nombre_usuario = null;
+    this.router.navigate(['/'])
   }
 }

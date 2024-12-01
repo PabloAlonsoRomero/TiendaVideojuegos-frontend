@@ -34,6 +34,7 @@ export class LoginComponent {
           
           localStorage.setItem('userId', response.userID);
           localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('nombre_usuario', response.nombreUsuario)
 
           this.router.navigate(['/']);
         },

@@ -23,9 +23,22 @@
                 </div>
 
                 <!-- Seccion del login -->
-                <div class="col-4 d-flex nav-right justify-content-end align-items-center" *ngIf="!isLoggedIn">
+                <div class="col-4 d-flex nav-right justify-content-end align-items-center" >
                     <input type="text" class="search-bar" placeholder="Buscador 🔍">
-                    <a routerLink="/login" class="btn btn-warning login-button ms-3">Login</a>
+                    <a routerLink="/login" class="btn btn-warning login-button ms-3" *ngIf="!isLoggedIn">Login</a>
+
+                    <!-- Codigo sobre dropdown de usuario -->
+                    <div class="dropdown nav-item">
+                        <a class="btn btn-warning login-button ms-3 dropdown-toggle" *ngIf="isLoggedIn" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ nombre_usuario }}</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" (click)="cerrarSesion()">Cerrar sesion</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
