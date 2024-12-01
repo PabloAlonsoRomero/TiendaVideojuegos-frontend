@@ -11,9 +11,12 @@
                         <li class="nav-item">
                             <a class="nav-link d-flex">Categorías</a>
                         </li>
+
+                        <!-- Codigo sobre dropdown de admin -->
                         <li class="nav-item">
                             <a class="nav-link d-flex" *ngIf="admin">Admin</a>
                         </li>
+
                     </ul>
                 </div>
 
@@ -31,8 +34,11 @@
                     <div class="dropdown nav-item">
                         <a class="btn btn-warning login-button ms-3 dropdown-toggle" *ngIf="isLoggedIn" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ nombre_usuario }}</a>
                         <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" (click)="cerrarSesion()">Cerrar sesion</a>
+                            <li class="nav-item">
+                                <a class="dropdown-item nav-link">Biblioteca</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item nav-link" (click)="cerrarSesion()">Cerrar sesion</a>
                             </li>
                         </ul>
                     </div>
