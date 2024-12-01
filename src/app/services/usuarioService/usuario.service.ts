@@ -28,4 +28,11 @@ export class UsuarioService {
         nombre_usuario: usuario.nombre_usuario
     });
   }
+
+  getBiblioteca(userId: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/usuario/biblioteca/`,{
+      userId: userId
+    }
+    );
+  }
 }
