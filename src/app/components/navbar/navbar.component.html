@@ -35,7 +35,7 @@
                         <a class="btn btn-warning login-button ms-3 dropdown-toggle" *ngIf="isLoggedIn" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ nombre_usuario }}</a>
                         <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
                             <li class="nav-item">
-                                <a class="dropdown-item nav-link">Biblioteca</a>
+                                <a class="dropdown-item nav-link" routerLink="/biblioteca">Biblioteca</a>
                             </li>
                             <li class="nav-item">
                                 <a class="dropdown-item nav-link" (click)="cerrarSesion()">Cerrar sesion</a>
