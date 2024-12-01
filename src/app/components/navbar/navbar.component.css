@@ -10,6 +10,8 @@ body, h1, h2, p, ul, li, a {
 
 .custom-dropdown-menu .dropdown-item {
     color: yellow;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 .custom-dropdown-menu .dropdown-item:hover {
