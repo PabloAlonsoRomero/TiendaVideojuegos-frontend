@@ -13,6 +13,7 @@ export class NavbarComponent {
   isLoggedIn = false;
   userId: string | null = null;
   nombre_usuario: string | null = null;
+  admin: boolean = false;
 
   constructor(
     private router: Router
@@ -21,6 +22,7 @@ export class NavbarComponent {
   ngOnInit() {
     this.isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     this.userId = localStorage.getItem('userId');
+    this.admin = localStorage.getItem('admin') === 'true';
 
     if (this.isLoggedIn) {
       this.nombre_usuario = localStorage.getItem('nombre_usuario');
