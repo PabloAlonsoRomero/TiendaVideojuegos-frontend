@@ -9,5 +9,5 @@ import { FooterComponent } from '../../components/footer/footer.component';
   styleUrl: './juego-especifico.component.css'
 })
 export class JuegoEspecificoComponent {
-
+  public _id = '';
 }
