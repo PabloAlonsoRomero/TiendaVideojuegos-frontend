@@ -5,10 +5,11 @@ import { UsuarioService } from '../../services/usuarioService/usuario.service';
 import { VideojuegoServiceService } from '../../services/videojuegoService/videojuego-service.service';
 import { IVideojuegoBibliotecaCard } from '../../interfaces/videojuego-biblioteca-card';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-biblioteca-page',
-  imports: [NavbarComponent, JuegoCardComponentComponent, CommonModule],
+  imports: [NavbarComponent, JuegoCardComponentComponent, CommonModule, FooterComponent],
   templateUrl: './biblioteca-page.component.html',
   styleUrl: './biblioteca-page.component.css'
 })
