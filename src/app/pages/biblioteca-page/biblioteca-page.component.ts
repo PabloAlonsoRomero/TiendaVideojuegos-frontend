@@ -4,10 +4,11 @@ import { JuegoCardComponentComponent } from '../../components/juego-card-compone
 import { UsuarioService } from '../../services/usuarioService/usuario.service';
 import { VideojuegoServiceService } from '../../services/videojuegoService/videojuego-service.service';
 import { IVideojuegoBibliotecaCard } from '../../interfaces/videojuego-biblioteca-card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-biblioteca-page',
-  imports: [NavbarComponent, JuegoCardComponentComponent],
+  imports: [NavbarComponent, JuegoCardComponentComponent, CommonModule],
   templateUrl: './biblioteca-page.component.html',
   styleUrl: './biblioteca-page.component.css'
 })

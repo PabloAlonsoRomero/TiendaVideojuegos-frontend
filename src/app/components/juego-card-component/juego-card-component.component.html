@@ -1,7 +1,11 @@
-<div class="card shadow-sm rounded-3 overflow-hidden m-2">
-    <div class="position-relative">
-        <div class="position-absolute bottom-0 start-0 bg-white px-3 py-1 shadow-lg rounded-pill text-center fw-bold m-2">
-            <img [src]="juego.imagen" alt="Imagen de juego">
-        </div>
+<div class="card" style="width: 18rem;">
+    <img [src]="juego.imagen" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5>
+            {{ juego.titulo }}
+        </h5>
+        <p>
+            {{ juego.descripcion }}
+        </p>
     </div>
 </div>

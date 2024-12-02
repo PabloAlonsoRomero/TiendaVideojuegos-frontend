@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="row">
     <div class="col-12 col-lg-6 col-xl-4 mb-4">
-        <app-juego-card-component></app-juego-card-component>
+        <app-juego-card-component *ngFor="let videojuego of this.bibliotecaInterface" [juego]="videojuego"></app-juego-card-component>
     </div>
 </div>
