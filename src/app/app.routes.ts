@@ -5,13 +5,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { BibliotecaPageComponent } from './pages/biblioteca-page/biblioteca-page.component';
 import { AgregarAdminComponent } from './pages/admin/agregar-admin/agregar-admin.component';
+import { authGuard } from './guards/AuthGuard/auth.guard';
+import { noAuthGuard } from './guards/NoAuthGuard/no-auth.guard';
+import { adminGuard } from './guards/AdminGuard/admin.guard';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'biblioteca', component: BibliotecaPageComponent},
-    { path: 'admin/agregarAdmin', component: AgregarAdminComponent}
+    { path: 'login', component: LoginComponent, canActivate: [authGuard] }, // Solo si no está logueado
+    { path: 'register', component: RegisterComponent, canActivate: [authGuard] }, // Solo si no está logueado
+    { path: 'biblioteca', component: BibliotecaPageComponent, canActivate: [noAuthGuard]}, // Solo si está logueado
+    { path: 'admin/agregarAdmin', component: AgregarAdminComponent, canActivate: [adminGuard]} // Solo si es admin
 ];
 
 @NgModule({
