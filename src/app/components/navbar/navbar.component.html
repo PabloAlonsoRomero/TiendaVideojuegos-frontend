@@ -13,8 +13,13 @@
                         </li>
 
                         <!-- Codigo sobre dropdown de admin -->
-                        <li class="nav-item">
-                            <a class="nav-link d-flex" *ngIf="admin">Admin</a>
+                        <li class="nav-item dropdown" *ngIf="admin">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+                            <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu text-center">
+                                <li class="nav-item">
+                                    <a class="dropdown-item nav-link" routerLink="/admin/agregarAdmin">Agregar administrador</a>
+                                </li>
+                            </ul>
                         </li>
 
                     </ul>
