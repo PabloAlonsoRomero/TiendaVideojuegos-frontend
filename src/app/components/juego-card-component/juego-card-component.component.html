@@ -1,18 +1,26 @@
-<div class="card border-white border-1" style="width: 18rem;">
-    <img [src]="juego.imagen" class="card-img-top border-white" style="height: 200px; object-fit: cover;" alt="...">
-    <div class="card-body">
-        <h5 class="text-warning fw-bold">
+<div class="card border-white border-1 h-100 ms-2 me-2">
+    <img [src]="juego.imagen" class="card-img-top border-white" style="height: 200px; object-fit: fill;" alt=" {{ juego.titulo }} ">
+    <div class="card-body d-flex flex-column">
+        <h5 class="text-warning fw-bold align-self-center">
             {{ juego.titulo }}
         </h5>
-        <p class="text-warning">
+        <p class="" style="max-height: 4.5em; overflow: hidden;">
             {{ getShortDescription(juego.descripcion) }}
         </p>
-        <p class="text-warning">
-            {{ mostrarGeneros(juego.genero) }}
+        <p class="">
+            Generos: {{ mostrarGeneros(juego.genero) }}
         </p>
-        <div class="justify-content-between">
-            <p class="text-warning">{{ juego.desarrollador.nombre }}</p>
-            <p class="text-warning">{{ juego.distribuidor.nombre }}</p>
+        <div class="mt-auto">
+            <p class="">Desarrollador: {{ juego.desarrollador.nombre }}</p>
+            <p class="">Distribuidor: {{ juego.distribuidor.nombre }}</p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <button class="w-50 btn btn-success me-2">
+                <a class="fw-bold text-white text-decoration-none">Jugar</a>
+            </button>
+            <button class="w-50 btn btn-secondary">
+                <a class="fw-bold text-white text-decoration-none">Ver más</a>
+            </button>
         </div>
     </div>
 </div>

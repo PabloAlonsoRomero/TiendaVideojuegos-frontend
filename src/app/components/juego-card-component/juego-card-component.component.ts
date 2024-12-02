@@ -12,7 +12,7 @@ export class JuegoCardComponentComponent {
 
   mostrarGeneros(generos: any[]): string {
     const generosText = generos.map(g => typeof g === 'string' ? g: g.nombre);
-    return generosText.slice(0, 3).join(' ')
+    return generosText.slice(0, 3).join(' - ')
   }
 
   getShortDescription(descripcion: string): string {

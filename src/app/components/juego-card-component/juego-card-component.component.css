@@ -1,3 +1,11 @@
 .card {
-    background-color: black;
+    background-color: #2a2a2a  ;
+}
+
+.card p {
+    color: #f0f0f0;
+}
+
+.card p:last-child {
+    color: #d1d1d1; /* Gris claro para el desarrollador/distribuidor */
 }
