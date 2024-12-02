@@ -1,11 +1,18 @@
-<div class="card" style="width: 18rem;">
-    <img [src]="juego.imagen" class="card-img-top" alt="...">
+<div class="card border-white border-1" style="width: 18rem;">
+    <img [src]="juego.imagen" class="card-img-top border-white" style="height: 200px; object-fit: cover;" alt="...">
     <div class="card-body">
-        <h5>
+        <h5 class="text-warning fw-bold">
             {{ juego.titulo }}
         </h5>
-        <p>
-            {{ juego.descripcion }}
+        <p class="text-warning">
+            {{ getShortDescription(juego.descripcion) }}
         </p>
+        <p class="text-warning">
+            {{ mostrarGeneros(juego.genero) }}
+        </p>
+        <div class="justify-content-between">
+            <p class="text-warning">{{ juego.desarrollador.nombre }}</p>
+            <p class="text-warning">{{ juego.distribuidor.nombre }}</p>
+        </div>
     </div>
 </div>

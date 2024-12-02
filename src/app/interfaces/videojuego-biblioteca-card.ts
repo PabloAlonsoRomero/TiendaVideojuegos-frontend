@@ -2,8 +2,8 @@ export interface IVideojuegoBibliotecaCard {
     _id: string;
     titulo: string;
     descripcion: string;
-    genero: string[];
-    desarrollador: string;
-    distribuidor: string;
+    genero: {nmbre: string}[];
+    desarrollador: { nombre: string };
+    distribuidor: { nombre: string };
     imagen: string;
 }

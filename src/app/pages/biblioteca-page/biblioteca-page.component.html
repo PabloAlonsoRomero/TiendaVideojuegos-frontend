@@ -1,6 +1,10 @@
 <app-navbar></app-navbar>
-<div class="row">
-    <div class="col-12 col-lg-6 col-xl-4 mb-4">
-        <app-juego-card-component *ngFor="let videojuego of this.bibliotecaInterface" [juego]="videojuego"></app-juego-card-component>
+<div class="container">
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let videojuego of this.bibliotecaInterface">
+            <div class="card-h-100p-3">
+                <app-juego-card-component [juego]="videojuego"></app-juego-card-component>
+            </div>
+        </div>
     </div>
 </div>
