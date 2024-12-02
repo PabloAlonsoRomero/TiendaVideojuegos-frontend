@@ -8,13 +8,15 @@ import { AgregarAdminComponent } from './pages/admin/agregar-admin/agregar-admin
 import { authGuard } from './guards/AuthGuard/auth.guard';
 import { noAuthGuard } from './guards/NoAuthGuard/no-auth.guard';
 import { adminGuard } from './guards/AdminGuard/admin.guard';
+import { JuegoEspecificoComponent } from './pages/juego-especifico/juego-especifico.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent, canActivate: [authGuard] }, // Solo si no está logueado
     { path: 'register', component: RegisterComponent, canActivate: [authGuard] }, // Solo si no está logueado
     { path: 'biblioteca', component: BibliotecaPageComponent, canActivate: [noAuthGuard]}, // Solo si está logueado
-    { path: 'admin/agregarAdmin', component: AgregarAdminComponent, canActivate: [adminGuard]} // Solo si es admin
+    { path: 'admin/agregarAdmin', component: AgregarAdminComponent, canActivate: [adminGuard]}, // Solo si es admin
+    { path: 'juego', component: JuegoEspecificoComponent} // Puede ir cualquiera
 ];
 
 @NgModule({
