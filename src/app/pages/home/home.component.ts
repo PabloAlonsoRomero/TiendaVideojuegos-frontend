@@ -45,4 +45,15 @@ export class HomeComponent implements OnInit{
   goToGame() {
     this.router.navigate(['juego', this._id])
   }
+
+  getJuegoByPlataforma(plataforma: string) {
+    this.videojuegoService.getJuegosByPlataforma(plataforma).subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.error('Error al obtener datos:', error);
+      }
+    )
+  }
 }

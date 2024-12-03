@@ -1,3 +1,14 @@
 <div class="card border-warning">
-    <img src="" alt="">
+    <img [src]="juego.imagen" alt=" {{ juego.titulo }} ">
+    <div class="card-body">
+        <h5 class="align-self-center">
+            {{ juego.titulo }}
+        </h5>
+        <p class="align-self-center">
+            {{ juego.descripcion }}
+        </p>
+        <a>
+            <button></button>
+        </a>
+    </div>
 </div>

@@ -18,4 +18,8 @@ export class VideojuegoServiceService {
   getJuego(_id: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/videojuegos/getOneVideojuego`, { _id: _id})
   }
+
+  getJuegosByPlataforma(_id: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/videojuegos/getByPlataforma`, { _id: _id })
+  }
 }
