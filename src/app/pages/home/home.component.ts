@@ -4,10 +4,12 @@ import { VideojuegoServiceService } from '../../services/videojuegoService/video
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { Router } from '@angular/router';
+import { JuegoCardHomeComponent } from '../../components/juego-card-home/juego-card-home.component';
+import { JuegoCardComponentComponent } from "../../components/juego-card-component/juego-card-component.component";
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, CommonModule, FooterComponent],
+  imports: [NavbarComponent, CommonModule, FooterComponent, JuegoCardHomeComponent, JuegoCardComponentComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   standalone: true
