@@ -20,6 +20,6 @@ export class VideojuegoServiceService {
   }
 
   getJuegosByPlataforma(_id: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/videojuegos/getByPlataforma`, { _id: _id })
+    return this.http.post(`${this.baseUrl}/videojuegos/getByPlataforma`, { plataforma: _id })
   }
 }
