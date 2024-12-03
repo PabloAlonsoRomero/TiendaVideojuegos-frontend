@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { Router } from '@angular/router';
 import { JuegoCardHomeComponent } from '../../components/juego-card-home/juego-card-home.component';
+import { IJuegoCardHome } from '../../interfaces/ijuego-card-home';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,11 @@ export class HomeComponent implements OnInit{
   imageUrl: string = '';
   _id : string = '';
 
+  // Juego por plataforma
+  bibiliotecaPlataforma: any[] = [];
+  juegosPlataformaInterface: IJuegoCardHome[] = [];
+  bibliotecaPlataformaLenght: number = 0;
+
   constructor(
     private videojuegoService: VideojuegoServiceService,
     private router: Router,
@@ -25,6 +31,7 @@ export class HomeComponent implements OnInit{
 
   ngOnInit() {
     this.getDatos();
+    this.getJuegoByPlataforma('673216eb8217039c5e4c4c32')
   }
 
   getDatos() {
@@ -49,7 +56,22 @@ export class HomeComponent implements OnInit{
   getJuegoByPlataforma(plataforma: string) {
     this.videojuegoService.getJuegosByPlataforma(plataforma).subscribe(
       response => {
-        console.log(response);
+        this.juegosPlataformaInterface = [];
+        console.log('Juegos obtenidos exitosamente')
+        this.bibiliotecaPlataforma = response;
+        this.bibliotecaPlataformaLenght = this.bibiliotecaPlataforma.length;
+        
+        // For para meterlos al arreglo de juegosPlataformaInterface
+        for (let i = 0; i < this.bibliotecaPlataformaLenght; i++) {
+          this.juegosPlataformaInterface.push({
+            _id: this.bibiliotecaPlataforma[i]._id,
+            titulo: this.bibiliotecaPlataforma[i].titulo,
+            descripcion: this.bibiliotecaPlataforma[i].descripcion,
+            imagen: this.bibiliotecaPlataforma[i].imagenes[0]
+          })
+        }
+
+        console.log(this.juegosPlataformaInterface)
       },
       error => {
         console.error('Error al obtener datos:', error);

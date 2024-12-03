@@ -16,24 +16,18 @@
 </div>
 <div class="categories">
   <div class="category" (click)="getJuegoByPlataforma('673216eb8217039c5e4c4c32')">🎮 PC</div>
-  <div class="category">🎮 XBOX</div>
-  <div class="category" >🎮 NINTENDO</div>
-  <div class="category" >🎮 PLAYSTATION</div>
+  <div class="category" (click)="getJuegoByPlataforma('673216ff8217039c5e4c4c35')">🎮 XBOX</div>
+  <div class="category" (click)="getJuegoByPlataforma('6732152c8217039c5e4c4c2d')">🎮 NINTENDO</div>
+  <div class="category" (click)="getJuegoByPlataforma('673216f98217039c5e4c4c34')">🎮 PLAYSTATION</div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="h-100 p-3">
-        <app-juego-card-home></app-juego-card-home>
+<div class="container-fluid mt-3 mb-3">
+  <div class="row g-1">
+    <div class="col-12 col-md-6 col-lg-12 d-flex">
+      <div class="h-100 p-3" *ngFor="let videojuego of this.juegosPlataformaInterface">
+        <app-juego-card-home [juego]="videojuego"></app-juego-card-home>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="carousel-container">
-  <div id="carousel" class="carousel">
-      <!-- Carrusel dinámico generado con JavaScript -->
   </div>
 </div>
 
