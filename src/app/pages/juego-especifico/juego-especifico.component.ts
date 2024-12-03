@@ -35,6 +35,9 @@ export class JuegoEspecificoComponent {
   plataformasLenght: number = 0;
   plataformas: string = '';
 
+  precio: string = '';
+  calificacion_promedio: string = '';
+
   constructor(
     private route: ActivatedRoute,
     private videojuegoService: VideojuegoServiceService
@@ -51,8 +54,9 @@ export class JuegoEspecificoComponent {
     this.videojuegoService.getJuego(_id).subscribe(
       response => {
         this.juego = response;
-        console.log(this.juego);
         this.juego.fecha_lanzamiento = this.formatDate(this.juego.fecha_lanzamiento);
+        this.precio = this.juego.precio?.$numberDecimal || 'No disponible';
+        this.calificacion_promedio = this.juego.calificacion_promedio?.$numberDecimal || 'N/A';
 
         this.generosLenght = this.juego.genero.length;
         for (let i = 0; i < this.generosLenght; i++) {

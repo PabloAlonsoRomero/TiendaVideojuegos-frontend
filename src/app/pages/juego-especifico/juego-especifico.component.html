@@ -10,14 +10,14 @@
             <div class="tags">
                 <span>Plataformas: {{ this.plataformas }}</span>
                 <span>Lanzamiento: {{ this.juego.fecha_lanzamiento }}</span>
-                <span>Calificacion: {{ this.juego.calificacion_promedio.$numberDecimal }}</span>
+                <span>Calificacion: {{ this.calificacion_promedio }}</span>
             </div>
             <div class="hero-buttons">
                 <button class="circle-button">❤</button>
                 <button class="circle-button">➕</button>
             </div>
             <br>
-            <p class="price">Precio: ${{ this.juego.precio.$numberDecimal }}</p>
+            <p class="price">Precio: ${{ this.precio }}</p>
         </div>
     </div>
     <br>
