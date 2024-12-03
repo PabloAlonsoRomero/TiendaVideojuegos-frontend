@@ -7,7 +7,7 @@ export interface IVideojuegoEspecifico {
     desarrollador: { nombre: string };
     distribuidor: { nombre: string };
     plataformas: { nombre: string }[];
-    fecha_lanzamiento: Date;
+    fecha_lanzamiento: string;
     imagenes: string[]
     video_url: string;
     calificacion_promedio: { $numberDecimal: string };

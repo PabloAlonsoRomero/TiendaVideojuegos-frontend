@@ -3,6 +3,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ActivatedRoute } from '@angular/router';
 import { VideojuegoServiceService } from '../../services/videojuegoService/videojuego-service.service';
+import { IVideojuegoEspecifico } from '../../interfaces/videojuego-especifico';
 
 @Component({
   selector: 'app-juego-especifico',
@@ -12,7 +13,27 @@ import { VideojuegoServiceService } from '../../services/videojuegoService/video
 })
 export class JuegoEspecificoComponent {
   juegoId: string = '';
-  juego: any;
+  juego: IVideojuegoEspecifico = {
+    _id: '',
+    titulo: '',
+    descripcion: '',
+    genero: [],
+    precio: { $numberDecimal: '' },
+    desarrollador: { nombre: '' },
+    distribuidor: { nombre: '' },
+    plataformas: [],
+    fecha_lanzamiento: '',
+    imagenes: [],
+    video_url: '',
+    calificacion_promedio: { $numberDecimal: '' },
+    estado: true
+  };
+
+  generosLenght: number = 0;
+  generos: string = '';
+
+  plataformasLenght: number = 0;
+  plataformas: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -22,7 +43,45 @@ export class JuegoEspecificoComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.juegoId = params.get('_id')!
-      console.log(this.juegoId)
+      this.getOneVideojuego(this.juegoId);
     })
   }
+
+  getOneVideojuego(_id: string) {
+    this.videojuegoService.getJuego(_id).subscribe(
+      response => {
+        this.juego = response;
+        console.log(this.juego);
+        this.juego.fecha_lanzamiento = this.formatDate(this.juego.fecha_lanzamiento);
+
+        this.generosLenght = this.juego.genero.length;
+        for (let i = 0; i < this.generosLenght; i++) {
+          if (i == this.generosLenght - 1) {
+            this.generos += this.juego.genero[i].nombre;
+          } else {
+            this.generos += this.juego.genero[i].nombre + ' • ';
+          }
+        }
+
+        this.plataformasLenght = this.juego.plataformas.length;
+        for (let i = 0; i < this.plataformasLenght; i++) {
+          if (i == this.plataformasLenght - 1) {
+            this.plataformas += this.juego.plataformas[i].nombre;
+          } else {
+            this.plataformas += this.juego.plataformas[i].nombre + ' • ';
+          }
+        }
+      }
+    )
+  }
+
+  formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Añade un 0 al mes si es necesario
+    const day = String(date.getDate()).padStart(2, '0'); // Añade un 0 al día si es necesario
+    return `${year}-${month}-${day}`;
+  }
+
+
 }

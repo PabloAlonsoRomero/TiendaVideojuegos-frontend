@@ -1,7 +1,35 @@
 <app-navbar></app-navbar>
 
-<div class="container-fluid py-4">
-
+<div class="game-detail">
+    <div class="game-header">
+        <img [src]="this.juego.imagenes[0]" alt="{{ this.juego.titulo }}" class="game-image">
+        <div class="game-info">
+            <br>
+            <h1>{{ this.juego.titulo }}</h1>
+            <p>Desarrollado por {{ this.juego.desarrollador.nombre }} • Géneros: {{ this.generos }}</p>
+            <div class="tags">
+                <span>Plataformas: {{ this.plataformas }}</span>
+                <span>Lanzamiento: {{ this.juego.fecha_lanzamiento }}</span>
+                <span>Calificacion: {{ this.juego.calificacion_promedio.$numberDecimal }}</span>
+            </div>
+            <div class="hero-buttons">
+                <button class="circle-button">❤</button>
+                <button class="circle-button">➕</button>
+            </div>
+            <br>
+            <p class="price">Precio: ${{ this.juego.precio.$numberDecimal }}</p>
+        </div>
+    </div>
+    <br>
+    <div class="game-description">
+        <h2>Descripción</h2>
+        <p>
+            {{ this.juego.descripcion }}
+        </p>
+        <br>
+    </div>
+    <br>
+    <br>
 </div>
 
 <app-footer></app-footer>
