@@ -16,7 +16,7 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent, canActivate: [authGuard] }, // Solo si no está logueado
     { path: 'biblioteca', component: BibliotecaPageComponent, canActivate: [noAuthGuard]}, // Solo si está logueado
     { path: 'admin/agregarAdmin', component: AgregarAdminComponent, canActivate: [adminGuard]}, // Solo si es admin
-    { path: 'juego', component: JuegoEspecificoComponent} // Puede ir cualquiera
+    { path: 'juego/:_id', component: JuegoEspecificoComponent} // Puede ir cualquiera
 ];
 
 @NgModule({
