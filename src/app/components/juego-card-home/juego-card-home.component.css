@@ -1,3 +1,17 @@
 .card {
     background-color: black;
+    height: 400px; /* Ajusta según lo que necesites */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Mantén las proporciones */
+}
+
+.card-body p {
+    max-height: 4.5em; /* Limita la altura de los párrafos */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Indica que hay texto oculto */
 }

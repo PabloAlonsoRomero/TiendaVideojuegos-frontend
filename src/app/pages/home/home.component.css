@@ -170,3 +170,9 @@
     background-color: rgb(245, 65, 65);
 }
 
+.h-100.p-2 {
+    flex: 1 1 20%; /* Distribuye equitativamente el espacio */
+    max-width: 20%; /* Asegura un ancho constante para las 5 cards */
+    box-sizing: border-box; /* Incluye padding y bordes en el cálculo del ancho */
+}
+
